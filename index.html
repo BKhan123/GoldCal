@@ -1,4 +1,4 @@
-<!DOCTYPE html111>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -188,12 +188,15 @@
                 height: 38px;
             }
             .breakup-row {
-                display: block;
+                display: flex;
                 font-size: 1em;
+                align-items: center;
+                justify-content: space-between;
             }
             .breakup-row span, .breakup-row strong {
-                display: block;
-                margin-bottom: 2px;
+                display: inline-block;
+                margin-bottom: 0;
+                vertical-align: middle;
             }
         }
         @media (max-width: 600px) {
@@ -242,6 +245,7 @@
         <div class="result" id="result"></div>
     </div>
     <script>
+        // ...existing code...
         function calculateGold() {
             var weight = parseFloat(document.getElementById('weight').value);
             var rate = parseFloat(document.getElementById('rate').value);
